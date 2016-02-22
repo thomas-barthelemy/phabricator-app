@@ -2,9 +2,9 @@ angular.module(
     'app',
     [
         'ionic',
-        'app.maniphest.controllers',
-        'app.differential.controllers',
-        'app.projects.controllers'
+        'app.maniphest',
+        'app.differential',
+        'app.projects'
     ]
 )
     .run(function ($ionicPlatform) {
@@ -28,36 +28,6 @@ angular.module(
                 url: '/tab',
                 "abstract": true,
                 templateUrl: 'templates/tabs.html'
-            })
-
-            .state('tab.maniphest', {
-                url: '/maniphest',
-                views: {
-                    'tab-maniphest': {
-                        templateUrl: 'templates/maniphest/view.html',
-                        controller: 'ManiphestCtrl'
-                    }
-                }
-            })
-
-            .state('tab.differential', {
-                url: '/differential',
-                views: {
-                    'tab-differential': {
-                        templateUrl: 'templates/differential/view.html',
-                        controller: 'DifferentialCtrl'
-                    }
-                }
-            })
-
-            .state('tab.projects', {
-                url: '/projects',
-                views: {
-                    'tab-projects': {
-                        templateUrl: 'templates/projects/view.html',
-                        controller: 'ProjectsCtrl'
-                    }
-                }
             });
 
         // if none of the above states are matched, use this as the fallback
