@@ -3,6 +3,7 @@ angular.module(
     [
         'ionic',
         'app.login',
+        'app.conduit',
         'app.maniphest',
         'app.differential',
         'app.projects'

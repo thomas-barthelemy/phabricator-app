@@ -1,45 +1,22 @@
-angular.module('app.login.services', [])
+angular.module('app.conduit.services', [])
 
-    .service('AuthService', function () {
-        var authStorage = {
-            url: undefined,
-            token: undefined
+    .service('ConduitService', function ($http, AuthService) {
+        var conduitService = {};
+        var getConduitUrl = function ($conduitMethod) {
+            return AuthService.getStorage().url +
+                '/api/' +
+                $conduitMethod;
+        };
+        conduitService.callGetConduit = function ($conduitMethod) {
+            return $http.get(
+                getConduitUrl($conduitMethod),
+                {
+                    params: {
+                        'api.token': AuthService.getStorage().token
+                    }
+                }
+            );
         };
 
-        var authService = {};
-
-        authService.getStorage = function () {
-            if(authStorage.url && authStorage.token) {
-                return authStorage;
-            }
-
-            var token = window.localStorage.getItem('token');
-            if(token) {
-                authStorage.token = token;
-            }
-
-            var url = window.localStorage.getItem('url');
-            if(url) {
-                authStorage.url = url;
-            }
-
-            return authStorage;
-        };
-
-        authService.isAuthenticated = function () {
-            authService.getStorage();
-            return authStorage.url && authStorage.token;
-        };
-
-        authService.setToken = function(token) {
-            authStorage.token = token;
-            window.localStorage.setItem('token', token);
-        };
-
-        authService.setUrl = function(url) {
-            authStorage.url = url;
-            window.localStorage.setItem('url', url);
-        };
-
-        return authService;
+        return conduitService;
     });
