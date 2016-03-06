@@ -1,5 +1,12 @@
 <ion-view view-title="Projects">
-    <ion-content class="padding">
-        {{ projects.length }} Projects
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="project in projects"
+                      ui-sref="tab.project-details({ id: project.id, project: project })"
+            >
+                <span class="positive">{{project.name}}</span>
+                <span class="dark">({{project.icon}})</span>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

@@ -2,7 +2,7 @@
   "name": "Phabricator App",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.2.4"
+    "ionic": "driftyco/ionic-bower#1.2.1"
   },
   "dependencies": {
     "font-awesome": "fontawesome#^4.5.0"

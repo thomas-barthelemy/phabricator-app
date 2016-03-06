@@ -1,4 +1,10 @@
-angular.module('app.projects', ['app.projects.controllers'])
+angular.module(
+    'app.projects',
+    [
+        'app.projects.controllers',
+        'app.projects.details.controllers'
+    ]
+)
 
     .config(function ($stateProvider) {
         $stateProvider
@@ -11,4 +17,16 @@ angular.module('app.projects', ['app.projects.controllers'])
                     }
                 }
             })
+            .state('tab.project-details', {
+                url: '/projects/:id',
+                views: {
+                    'tab-projects': {
+                        templateUrl: 'templates/projects/details.html',
+                        controller: 'ProjectDetailsCtrl'
+                    }
+                },
+                params: {
+                    project: null
+                }
+            });
     });

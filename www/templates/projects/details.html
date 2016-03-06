@@ -1,0 +1,15 @@
+<ion-view view-title="{{project.name}}">
+    <ion-content>
+        <div class="list card">
+            <div class="item">
+                {{ project.name }}
+            </div>
+            <div class="item">
+                {{ project.dateCreated * 1000 | date }}
+            </div>
+            <div class="item">
+                {{ project.dateModified * 1000 | date }}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
