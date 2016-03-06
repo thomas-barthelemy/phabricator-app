@@ -1,0 +1,15 @@
+<ion-view view-title="Login">
+    <ion-content class="padding">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="url" placeholder="Phabricator URL" ng-model="data.url">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Token" ng-model="data.token">
+            </label>
+        </div>
+        <button class="button button-block button-calm" ng-click="login()">
+            Login
+        </button>
+    </ion-content>
+</ion-view>
