@@ -6,7 +6,7 @@ angular.module('app.differential', ['app.differential.controllers'])
                 url: '/differential',
                 views: {
                     'tab-differential': {
-                        templateUrl: 'templates/differential/view.html',
+                        templateUrl: 'app/differential/view.html',
                         controller: 'DifferentialCtrl'
                     }
                 }

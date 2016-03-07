@@ -11,7 +11,7 @@ angular.module(
                 url: '/login',
                 views: {
                     '': {
-                        templateUrl: 'templates/login/view.html',
+                        templateUrl: 'app/login/view.html',
                         controller: 'LoginCtrl'
                     }
                 }

@@ -6,7 +6,7 @@ angular.module('app.maniphest', ['app.maniphest.controllers'])
                 url: '/maniphest',
                 views: {
                     'tab-maniphest': {
-                        templateUrl: 'templates/maniphest/view.html',
+                        templateUrl: 'app/maniphest/view.html',
                         controller: 'ManiphestCtrl'
                     }
                 }

@@ -12,7 +12,7 @@ angular.module(
                 url: '/projects',
                 views: {
                     'tab-projects': {
-                        templateUrl: 'templates/projects/view.html',
+                        templateUrl: 'app/projects/view.html',
                         controller: 'ProjectsCtrl'
                     }
                 }
@@ -21,7 +21,7 @@ angular.module(
                 url: '/projects/:id',
                 views: {
                     'tab-projects': {
-                        templateUrl: 'templates/projects/details.html',
+                        templateUrl: 'app/projects/details.html',
                         controller: 'ProjectDetailsCtrl'
                     }
                 },
